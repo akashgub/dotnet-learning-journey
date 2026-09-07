@@ -1,4 +1,4 @@
-﻿int choice = 2;
+﻿﻿int choice = 2;
 
 Console.WriteLine("=====Menu=====");
 Console.WriteLine("1. View Profile");
