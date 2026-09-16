@@ -1,7 +1,22 @@
-﻿class Person
+﻿class Employee
 {
-    public string name;
-    public int age;
+    public string Name;
+    public int Age;
+    public string Position;
+    public int Salary;
+
+
+    public Employee(string name, int age, string position, int salary){
+        Name = name;
+        Age = age;
+        Position = position;
+        Salary = salary;
+    }
+
+    public void DisplayInfo(){
+        Console.WriteLine($"Name: {Name}, Age: {Age}, Position: {Position}, Salary: {Salary}"); 
+
+}
 
 }
 
@@ -9,16 +24,14 @@ class Test
 {
     public static void Main(string[] args)
     {
-        Person p1 = new Person();
-        p1.name = "Akash";
-        p1.age = 24;
-        Console.WriteLine($"Name: {p1.name}, Age: {p1.age}\n"); 
+        Employee E1 = new Employee("Akash", 24, "Junior Software Engineer", 25000);
+        E1.DisplayInfo();
 
-        Person p2 = new Person();
-        p2.name = "Karim";
-        p2.age = 30;
-        Console.WriteLine($"Name: {p2.name}, Age: {p2.age}\n"); 
+        Employee E2 = new Employee("Rahim", 25, "Backend Developer", 30000);
+        E2.DisplayInfo();
 
+        Employee E3 = new Employee("Karim", 26, "Software Engineer", 40000);
+        E3.DisplayInfo();
         
     }
 }
