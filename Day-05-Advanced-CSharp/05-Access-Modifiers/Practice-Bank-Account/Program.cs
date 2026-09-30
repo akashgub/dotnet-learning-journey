@@ -12,7 +12,6 @@
     // internal
     internal string BankName;
 
-
     public BankAccount(
         string accountHolder,
         double balance,
@@ -25,7 +24,6 @@
         BankName = bankName;
     }
 
-
     // public method
     public void ShowAccountInfo()
     {
@@ -35,8 +33,7 @@
         Console.WriteLine($"Bank Name: {BankName}");
     }
 
-
-    // private member ব্যবহার করার জন্য public method
+    // private member 
     public void Deposit(double amount)
     {
         Balance += amount;
@@ -45,7 +42,6 @@
             $"{AccountHolder} deposited {amount}."
         );
     }
-
 
     public void Withdraw(double amount)
     {
@@ -66,7 +62,6 @@
     }
 }
 
-
 // Child class
 class SavingsAccount : BankAccount
 {
@@ -77,8 +72,8 @@ class SavingsAccount : BankAccount
         string bankName)
         : base(accountHolder, balance, accountNumber, bankName)
     {
+        
     }
-
 
     // protected member access
     public void ShowAccountNumber()
@@ -88,7 +83,6 @@ class SavingsAccount : BankAccount
         );
     }
 }
-
 
 class Program
 {
@@ -102,7 +96,6 @@ class Program
             "ABC Bank"
         );
 
-
         // Account 2
         SavingsAccount account2 = new SavingsAccount(
             "Rahim",
@@ -110,7 +103,6 @@ class Program
             "ACC-1002",
             "ABC Bank"
         );
-
 
         // Account 3
         SavingsAccount account3 = new SavingsAccount(
@@ -120,10 +112,7 @@ class Program
             "ABC Bank"
         );
 
-
-        // =========================
         // Account 1
-        // =========================
 
         Console.WriteLine("===== Account 1 =====");
 
@@ -137,7 +126,7 @@ class Program
             $"Bank Name: {account1.BankName}"
         );
 
-        // private member ব্যবহার হচ্ছে method-এর মাধ্যমে
+        // private member
         account1.Deposit(5000);
 
         account1.Withdraw(3000);
@@ -147,13 +136,9 @@ class Program
 
         account1.ShowAccountInfo();
 
-
         Console.WriteLine();
 
-
-        // =========================
         // Account 2
-        // =========================
 
         Console.WriteLine("===== Account 2 =====");
 
@@ -167,7 +152,7 @@ class Program
             $"Bank Name: {account2.BankName}"
         );
 
-        // private member ব্যবহার হচ্ছে method-এর মাধ্যমে
+        // private member 
         account2.Deposit(10000);
 
         account2.Withdraw(5000);
@@ -177,13 +162,9 @@ class Program
 
         account2.ShowAccountInfo();
 
-
         Console.WriteLine();
 
-
-        // =========================
         // Account 3
-        // =========================
 
         Console.WriteLine("===== Account 3 =====");
 
@@ -197,7 +178,7 @@ class Program
             $"Bank Name: {account3.BankName}"
         );
 
-        // private member ব্যবহার হচ্ছে method-এর মাধ্যমে
+        // private member 
         account3.Deposit(20000);
 
         account3.Withdraw(10000);
