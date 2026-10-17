@@ -1,11 +1,22 @@
 ﻿string[] products =
 {
-    "Laptop",
-    "Smartphone",
-    "Tablet",
-    "Headphones",
-    "Smartwatch"
+    "C#",
+    "Python",
+    "JavaScript",
+    "C++",
+    "Go",
+    "Ruby"
 };
+
+for(int i = 0; i < products.Length; i++)
+{
+    Console.WriteLine($"Index: {i}, Language: {products[i]}");
+}
+
+foreach(string product in products)
+{
+    Console.WriteLine($"Language: {product}");
+}
 
 Array.Sort(products);
 
@@ -13,16 +24,16 @@ Console.WriteLine("=== Sorted Products ===");
 
 foreach (string product in products)
 {
-    Console.WriteLine(product);
+    Console.WriteLine($"Language: {product}");
 }
 
-int index = Array.IndexOf(products, "Smartphone");
+int index = Array.IndexOf(products, "C#");
 
-Console.WriteLine($"Smartphone Index: {index}"); 
+Console.WriteLine($"C# Index: {index}"); 
 
 bool exists = Array.Exists(
     products,
-    product => product == "Mouse"
+    product => product == "Python"
 );
 
-Console.WriteLine($"Mouse Exists: {exists}");
+Console.WriteLine($"Python Exists: {exists}");
